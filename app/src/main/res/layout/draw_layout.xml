@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/draw_color_shape"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_30sdp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo_menu" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/imgLogo"
+                android:src="@drawable/zuku_title" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@drawable/line_draw_shape" />
+
+        <TextView
+            android:id="@+id/txtWallPaper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/wallpaper_icon"
+            android:drawablePadding="@dimen/_20sdp"
+            android:fontFamily="@font/barlow_extrabold"
+            android:gravity="center"
+            android:onClick="relativeWallpapers"
+            android:includeFontPadding="false"
+            android:text="@string/wallpaper"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:id="@+id/txtVideoWallpaper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/video_wallpaper"
+            android:drawablePadding="@dimen/_20sdp"
+            android:fontFamily="@font/barlow_extrabold"
+            android:gravity="center"
+            android:onClick="relativeVideoWp"
+            android:includeFontPadding="false"
+            android:text="@string/vie_wallpaper"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:id="@+id/txtFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/fav_wallpaper"
+            android:drawablePadding="@dimen/_20sdp"
+            android:fontFamily="@font/barlow_extrabold"
+            android:gravity="center"
+            android:visibility="gone"
+            android:onClick="relativeFav"
+            android:includeFontPadding="false"
+            android:text="@string/my_fav"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:id="@+id/txtMyDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/dow_wp"
+            android:drawablePadding="@dimen/_20sdp"
+            android:fontFamily="@font/barlow_extrabold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:onClick="relativeDownload"
+            android:text="@string/my_download"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/line_draw_shape" />
+
+        <TextView
+            android:id="@+id/txtSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/settings_wp"
+            android:drawablePadding="@dimen/_20sdp"
+            android:fontFamily="@font/barlow_extrabold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:onClick="relativeSettings"
+            android:text="@string/settings"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:id="@+id/txtHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:drawableStart="@drawable/help"
+            android:drawablePadding="@dimen/_20sdp"
+            android:fontFamily="@font/barlow_extrabold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:onClick="relativeHelp"
+            android:text="@string/help"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:id="@+id/txtInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:drawableStart="@drawable/infor"
+            android:drawablePadding="@dimen/_20sdp"
+            android:fontFamily="@font/barlow_extrabold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:onClick="relativeInformation"
+            android:text="@string/info"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/line_draw_shape" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/dra_log_shape"
+            android:onClick="relativeLogout">
+
+            <TextView
+                android:id="@+id/txtLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:fontFamily="@font/baloo_tamma"
+                android:includeFontPadding="false"
+                android:paddingTop="@dimen/_2sdp"
+                android:text="@string/logout"
+                android:textColor="@color/log_color"
+                android:textSize="@dimen/_14sdp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/line_draw_shape" />
+
+
+    </LinearLayout>
+
+
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/linear"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:clickable="true"-->
+<!--        android:src="#33000000" />-->
+
+
+
+</RelativeLayout>

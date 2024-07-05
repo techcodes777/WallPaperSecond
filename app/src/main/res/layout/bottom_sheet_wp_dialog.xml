@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearBottomSheetDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:src="@drawable/line_dialog_shape" />
+
+            <RelativeLayout
+                android:id="@+id/setWp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_40sdp"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/imgWp"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_18sdp"
+                    android:src="@drawable/set_wp" />
+
+                <TextView
+                    android:id="@+id/txtSetWp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgWp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:padding="8dp"
+                    android:text="@string/set_wp"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/setLockScreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_40sdp"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/imgLockScreen"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_18sdp"
+                    android:src="@drawable/set_lock_wp" />
+
+                <TextView
+                    android:id="@+id/txtSetLockScreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgLockScreen"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:padding="8dp"
+                    android:text="@string/lock_screen"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/setBoth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_40sdp"
+                android:padding="@dimen/_8sdp">
+
+                <ImageView
+                    android:id="@+id/imgBothWP"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_17sdp"
+                    android:src="@drawable/set_both_wp" />
+
+                <TextView
+                    android:id="@+id/txtSetBothScreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/imgBothWP"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:padding="8dp"
+                    android:text="@string/set_both"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/setDownload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_40sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/imgDownload"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_19sdp"
+                    android:src="@drawable/download_wp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/imgDownload"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:padding="8dp"
+                    android:text="@string/download"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/rotate_wp"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

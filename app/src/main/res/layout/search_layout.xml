@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/searchLL"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_centerHorizontal="true"
+        android:iconifiedByDefault="false"
+        app:queryHint="@string/search_text"
+        android:layout_alignParentTop="true"
+        android:background="#B5B5B5"
+        android:visibility="visible"
+        android:focusable="false"
+        android:theme="@style/BaseTheme"
+        app:iconifiedByDefault="false"
+        android:textColorHint="@color/black"
+        android:clickable="true"
+        android:imeOptions="actionSearch"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewSV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                android:overScrollMode="never" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/rotate_wp_data"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewSVOther"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:overScrollMode="never" />
+            
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="@dimen/_200sdp"-->
+    <!--        android:src="@color/black"/>-->
+</LinearLayout>
